@@ -66,3 +66,6 @@ scoreboard players operation $t2 Temp = $t0 Temp
 scoreboard players operation $t3 Temp = $t1 Temp
 scoreboard players set $t4 Temp 1
 execute if score $t2 Temp < $6 Const if score $1 Const < $t3 Temp run function core:set/piece/1
+
+function core:control/reset_candidate/main
+function core:control/change_player/main
