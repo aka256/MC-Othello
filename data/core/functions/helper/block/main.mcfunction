@@ -7,6 +7,7 @@ execute at @e[tag=OthelloBase] run fill ~9 ~ ~9 ~ ~ ~9 minecraft:polished_diorit
 execute at @e[tag=OthelloBase] run fill ~ ~ ~9 ~ ~ ~ minecraft:polished_diorite replace
 
 execute as @e[tag=OthelloBase] at @s positioned ~1 ~ ~1 run fill ~ ~ ~ ~7 ~ ~7 minecraft:polished_andesite replace
+execute as @e[tag=OthelloBase] at @s positioned ~1 ~1 ~1 run fill ~ ~ ~ ~7 ~1 ~7 minecraft:air replace
 
 execute store result score $t0 Temp run data get storage othello: main[0][0]
 execute if score $t0 Temp matches 0 at @e[tag=OthelloBase] positioned ~1 ~ ~1 run function core:helper/block/0

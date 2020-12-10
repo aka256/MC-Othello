@@ -13,3 +13,10 @@ data modify storage othello: candidate append from storage othello: base
 #function core:helper/board/setter/main
 
 data modify storage othello: board set from storage othello: main
+
+scoreboard players operation $x helper_board = $t0 Temp
+scoreboard players operation $y helper_board = $t1 Temp
+scoreboard players set $a0 helper_board 2
+function core:helper/board/setter/main
+
+data modify storage othello: main set from storage othello: board

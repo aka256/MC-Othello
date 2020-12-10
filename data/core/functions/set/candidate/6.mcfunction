@@ -8,11 +8,11 @@
 # このときには、
 # ($t2,$t3)が$playerで($t0,$t1)が2となる位置
 
-execute store result score $x helper_board run scoreboard players get $t0 Temp
-execute store result score $y helper_board run scoreboard players get $t1 Temp
-scoreboard players set $a0 helper_board 2
-function core:helper/board/setter/main
-data modify storage othello: main set from storage othello: board
+#execute store result score $x helper_board run scoreboard players get $t0 Temp
+#execute store result score $y helper_board run scoreboard players get $t1 Temp
+#scoreboard players set $a0 helper_board 2
+#function core:helper/board/setter/main
+#data modify storage othello: main set from storage othello: board
 
 scoreboard players operation $t2 Temp -= $t5 Temp
 scoreboard players operation $t3 Temp -= $t6 Temp

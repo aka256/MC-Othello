@@ -14,6 +14,8 @@ data remove storage othello: candidate
 scoreboard objectives add Settings dummy
 scoreboard players set $player Settings 0
 scoreboard players set $waiting Settings 1
+scoreboard players set $button Settings 0
+scoreboard players set $auto Settings 0
 
 # 作業用スコア(MIPSでいう$t0~$t7的な)
 scoreboard objectives add Temp dummy
@@ -42,3 +44,6 @@ scoreboard players set $8 Const 8
 function core:helper/board/load
 
 function core:helper/print/load
+
+execute if entity @e[tag=OthelloBase,tag=!OthelloStop] run function core:set/candidate/main
+execute if entity @e[tag=OthelloBase,tag=!OthelloStop] run function core:helper/block/main

@@ -227,3 +227,44 @@ execute store result score $t2 Temp run data get storage othello: board[7][7]
 execute if score $t2 Temp matches -1 run function core:set/candidate/1
 
 data modify storage othello: main set from storage othello: board
+
+scoreboard players set $button Settings 1
+
+# board = main
+# for i in range(8):
+#   for j in range(8):
+#     if board[i][j]==-1:
+#       $t4 = 0
+#       $t7 = 0
+#       for k in range(-1,2):
+#         for l in range(-1,2):
+#           $t2 = i + k
+#           $t3 = j + l
+#           if 1<$t2<7 and 1<$t3<7:
+#             while board[$t2][$t3]==$waiting:
+#               $t2 += k
+#               $t3 += l
+#               if 0<=$t2<8 and 0<=$t3<8 and board[$t2][$t3]==$player:
+#                 $t4 = 1
+#                 $t7 = 1
+#             if $t4==1:
+#               board[i][j] = 2   いらない
+#               main = board      いらない?
+#               $t2 -= k
+#               $t3 -= l
+#               while $t4==1:
+#                 board[$t2][$t3] = $player
+#                 $t2 -= k
+#                 $t3 -= l
+#                 if $t2==i and $t3==j:
+#                   $t4 = 0
+#               board[i][j] = $player
+#       if $t7==1:
+#         base.board = board
+#         base.cordinate[0] = i
+#         base.cordinate[1] = j
+#         candidate.append(base)
+#         board = main
+#         board[i][j] = 2
+#         main = board
+# main = board
