@@ -8,6 +8,8 @@
 # $t1: y座標
 # $t2: board(n,m)の値保存用
 
+data modify storage othello: board set from storage othello: main
+
 # board(0,n)
 scoreboard players set $t0 Temp 0
 scoreboard players set $t1 Temp 0
@@ -223,3 +225,5 @@ execute if score $t2 Temp matches -1 run function core:set/candidate/1
 scoreboard players set $t1 Temp 7
 execute store result score $t2 Temp run data get storage othello: board[7][7]
 execute if score $t2 Temp matches -1 run function core:set/candidate/1
+
+data modify storage othello: main set from storage othello: board

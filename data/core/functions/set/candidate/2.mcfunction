@@ -16,4 +16,4 @@ execute store result score $t3 Temp run scoreboard players get $t1 Temp
 scoreboard players operation $t2 Temp += $t5 Temp
 scoreboard players operation $t3 Temp += $t6 Temp
 
-execute if score $0 Const <= $t2 Temp if score $t2 Temp < $8 Const if score $0 Const <= $t3 Temp if score $t3 Temp < $8 Const run function core:set/candidate/3
+execute if score $1 Const < $t2 Temp if score $t2 Temp < $7 Const if score $1 Const < $t3 Temp if score $t3 Temp < $7 Const run function core:set/candidate/3

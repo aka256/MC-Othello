@@ -10,4 +10,5 @@ execute store result score $x helper_board run scoreboard players get $t2 Temp
 execute store result score $y helper_board run scoreboard players get $t3 Temp
 function core:helper/board/getter/main
 execute if score $v0 helper_board = $player Settings run scoreboard players set $t4 Temp 1
+execute if score $v0 helper_board = $player Settings run scoreboard players set $t7 Temp 1
 execute if score $v0 helper_board = $waiting Settings run function core:set/candidate/4

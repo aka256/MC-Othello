@@ -2,6 +2,8 @@
 #
 # @internal
 
+data modify storage othello: board set from storage othello: main
+
 execute store result score $t0 Temp run data get storage othello: board[0][0]
 execute if score $t0 Temp matches 2 run data modify storage othello: board[0][0] set value -1
 execute store result score $t0 Temp run data get storage othello: board[0][1]
@@ -130,3 +132,5 @@ execute store result score $t0 Temp run data get storage othello: board[7][6]
 execute if score $t0 Temp matches 2 run data modify storage othello: board[7][6] set value -1
 execute store result score $t0 Temp run data get storage othello: board[7][7]
 execute if score $t0 Temp matches 2 run data modify storage othello: board[7][7] set value -1
+
+data modify storage othello: main set from storage othello: board

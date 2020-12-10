@@ -4,7 +4,10 @@
 
 # 盤面の作成
 # 中心部分の初期化も兼ねる
-data merge storage othello: {"board":[[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,0,1,-1,-1,-1],[I;-1,-1,-1,1,0,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1]]}
+data merge storage othello: {"main":[[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,0,1,-1,-1,-1],[I;-1,-1,-1,1,0,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1]]}
+data modify storage othello: board set from storage othello: main
+data merge storage othello: {"base":{"cordinate":[I;-1,-1],"board":[[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1]]}}
+data remove storage othello: candidate
 
 # プレイヤー選択
 #data merge storage othello:settings {"player":0}
@@ -21,6 +24,7 @@ scoreboard players set $t3 Temp 0
 scoreboard players set $t4 Temp 0
 scoreboard players set $t5 Temp 0
 scoreboard players set $t6 Temp 0
+scoreboard players set $t7 Temp 0
 
 # 定数群
 scoreboard objectives add Const dummy

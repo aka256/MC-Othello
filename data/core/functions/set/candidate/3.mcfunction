@@ -15,5 +15,6 @@ execute store result score $x helper_board run scoreboard players get $t2 Temp
 execute store result score $y helper_board run scoreboard players get $t3 Temp 
 function core:helper/board/getter/main
 execute if score $v0 helper_board = $waiting Settings run function core:set/candidate/4
-# (x,y)=2
+
+# ($t0,$t1)に駒が置ける場合に実行($t4=1)
 execute if score $t4 Temp matches 1 run function core:set/candidate/6

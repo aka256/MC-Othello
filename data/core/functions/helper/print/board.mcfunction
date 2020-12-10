@@ -1,4 +1,4 @@
-#> core:helper/print/borad
+#> core:helper/print/board
 # オセロ盤表示用function
 # @public
 

@@ -7,12 +7,20 @@
 #declare storage othello
 
 #>
-# オセロ盤保存リスト
+# オセロ作業用リスト
 # -1: 空白
 # 0: 黒
 # 1: 白
 # @public
-#declare storage othello:board
+#declare storage othello: board
+
+#>
+# オセロ現状保存用リスト
+# -1: 空白
+# 0: 黒
+# 1: 白
+# @public
+#declare storage othello: main
 
 #>
 # オセロ設定
