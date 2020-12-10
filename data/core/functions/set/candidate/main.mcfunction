@@ -229,7 +229,7 @@ execute if score $t2 Temp matches -1 run function core:set/candidate/1
 data modify storage othello: main set from storage othello: board
 
 scoreboard players set $button Settings 1
-
+function core:control/end_judgment/main
 # board = main
 # for i in range(8):
 #   for j in range(8):

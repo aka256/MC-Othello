@@ -4,7 +4,9 @@
 
 # 盤面の作成
 # 中心部分の初期化も兼ねる
-data merge storage othello: {"main":[[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,0,1,-1,-1,-1],[I;-1,-1,-1,1,0,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1]]}
+#data merge storage othello: {"main":[[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,0,1,-1,-1,-1],[I;-1,-1,-1,1,0,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1]]}
+data merge storage othello: {"main":[[I;-1,0,-1,-1,-1,0,-1,-1],[I;-1,-1,0,-1,-1,0,-1,-1],[I;-1,-1,-1,0,-1,0,-1,1],[I;-1,-1,-1,0,0,0,1,-1],[I;0,0,0,0,0,1,-1,-1],[I;-1,-1,0,0,0,-1,-1,-1],[I;-1,-1,0,0,0,-1,-1,-1],[I;-1,-1,0,0,0,0,0,-1]]}
+#data merge storage othello: {"main":[[I;0,0,0,0,0,0,0,0],[I;0,0,1,1,1,0,1,0,0],[I;0,1,0,0,1,0,1,0],[I;0,0,1,0,0,1,1,0],[I;0,1,0,0,0,0,1,0],[I;0,1,0,1,1,0,0,0],[I;0,0,1,1,1,0,0,0],[I;0,0,0,0,0,0,0,-1]]}
 data modify storage othello: board set from storage othello: main
 data merge storage othello: {"base":{"cordinate":[I;-1,-1],"board":[[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1]]}}
 data remove storage othello: candidate
@@ -16,6 +18,8 @@ scoreboard players set $player Settings 0
 scoreboard players set $waiting Settings 1
 scoreboard players set $button Settings 0
 scoreboard players set $auto Settings 0
+scoreboard players set $skip Settings 0
+scoreboard players set $finish Settings 0
 
 # 作業用スコア(MIPSでいう$t0~$t7的な)
 scoreboard objectives add Temp dummy
