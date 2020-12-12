@@ -38,6 +38,36 @@
 #declare score_holder $waiting
 
 #>
+# ブロック設置時のボタン用フラグ
+# @public
+#declare score_holder $button
+
+#>
+# ブロック設置可否フラグ
+# @public
+#declare score_holder $blockSet
+
+#>
+# 自動実行フラグ
+# @public
+#declare score_holder $auto
+
+#>
+# スキップフラグ
+# @public
+#declare score_holder $skip
+
+#>
+# ゲーム終了フラグ
+# @public
+#declare score_holder $finish
+
+#>
+# オセロ盤初期化フラグ
+# @public
+#declare score_holder $init_board
+
+#>
 # 作業用スコア
 # @internal
 #declare objective Temp
