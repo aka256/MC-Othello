@@ -54,6 +54,9 @@
 
 #>
 # スキップフラグ
+# 0: 直前の回ではスキップしていない
+# 1: 直前の回でスキップした
+# 2: 両者ともスキップした
 # @public
 #declare score_holder $skip
 
@@ -66,6 +69,16 @@
 # オセロ盤初期化フラグ
 # @public
 #declare score_holder $init_board
+
+#>
+# 引数用スコア
+# @internal
+#declare objective Argument
+
+#>
+# 返り値用スコア
+# @internal
+#declare objective Return
 
 #>
 # 作業用スコア

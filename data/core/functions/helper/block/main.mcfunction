@@ -1,5 +1,5 @@
 #> core:helper/block/main
-# @public
+# @internal
 
 execute at @e[tag=OthelloBase] run fill ~ ~ ~ ~9 ~ ~ minecraft:polished_diorite replace
 execute at @e[tag=OthelloBase] run fill ~9 ~ ~ ~9 ~ ~9 minecraft:polished_diorite replace

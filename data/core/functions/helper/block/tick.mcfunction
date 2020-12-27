@@ -1,6 +1,6 @@
 #> core:helper/block/tick
 # @internal
-#tell @a block/tick
+
 execute at @e[tag=OthelloBase] if block ~1 ~1 ~1 minecraft:stone_button[powered=true] store success score $pushed Global run function core:helper/block/button/0-0
 execute at @e[tag=OthelloBase] if block ~1 ~1 ~2 minecraft:stone_button[powered=true] store success score $pushed Global run function core:helper/block/button/0-1
 execute at @e[tag=OthelloBase] if block ~1 ~1 ~3 minecraft:stone_button[powered=true] store success score $pushed Global run function core:helper/block/button/0-2

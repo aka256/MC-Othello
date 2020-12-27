@@ -1,0 +1,4 @@
+{
+  "datapack.lint.nameOfObjectives": ["warning","PascalCase"],
+  "datapack.lint.nameOfTags": ["warning","PascalCase"]
+}
