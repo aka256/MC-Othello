@@ -17,3 +17,5 @@ execute if score $skip Global matches 0 run scoreboard players set $state Global
 #execute if score $skip Global matches 1 run tellraw @a "$t0=0 and $skip=0"
 execute if score $skip Global matches 1 run scoreboard players set $state Global 1
 execute if score $skip Global matches 2 run scoreboard players set $state Global 0
+
+scoreboard players set $done Global 1

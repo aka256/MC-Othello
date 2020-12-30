@@ -24,7 +24,7 @@ scoreboard objectives add Global dummy
 scoreboard players set $skip Global 0
 #scoreboard players set $finish Global 0
 # オセロ盤初期化フラグ
-scoreboard players set $initBoard Settings 0
+#scoreboard players set $initBoard Settings 0
 # 状況保存スコア
 scoreboard players set $state Global 0
 # load_once用スコア

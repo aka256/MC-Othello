@@ -5,3 +5,4 @@
 #tell @a state_2
 function core:helper/block/main
 scoreboard players set $state Global 3
+scoreboard players set $done Global 1
