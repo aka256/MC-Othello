@@ -1,5 +1,7 @@
 #> core:tick_pva2
 # player vs AI(もどき)でのプレイ時に呼び出されるfunction
+# αβ法と深さ5のゲーム木によるAI
+# set_leafの付与効率が悪くなっているので注意
 # @internal
 
 scoreboard players set $done Global 0

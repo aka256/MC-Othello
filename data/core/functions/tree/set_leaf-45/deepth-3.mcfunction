@@ -12,7 +12,10 @@ function core:set/candidate/main
 
 function core:control/change_player/main
 
-execute unless data storage othello: candidate[0] run function core:tree/set_leaf-45/deepth-3_skip
+scoreboard players set $t25 Temp 0
+execute if data storage othello: candidate[0] run scoreboard players set $t25 Temp 1
+execute if score $t25 Temp matches 0 run function core:tree/set_leaf-45/deepth-4
+execute if score $t25 Temp matches 1 run function core:tree/set_leaf-45/deepth-3_skip
 data modify storage othello:tree tree[0].next[0].next[0].next set from storage othello: candidate
 
 # loop用にtree[0].next[0].next[0].next[0].cordinateを$15,$16に保存
@@ -21,7 +24,7 @@ execute store result score $t13 Temp run data get storage othello: candidate_cou
 # tree[0].next[0].next[0].next内の最大のevaluationを保存するスコア
 scoreboard players set $t22 Temp -2147483648
 
-execute if data storage othello: candidate[0] run function core:tree/set_leaf-45/deepth-4
+
 function core:control/change_player/main
 
 # $t21 = min($t21,$t22)

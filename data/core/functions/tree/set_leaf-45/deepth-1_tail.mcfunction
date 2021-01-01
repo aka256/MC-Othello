@@ -22,7 +22,7 @@ execute if score $t17 Temp matches 1 run scoreboard players operation $v0 Return
 execute if score $t17 Temp matches 1 run scoreboard players set $setLeaf Global 1
 
 # デバッグ用
-execute store result score $t26 Temp run time query gametime
-scoreboard players operation $t26 Temp -= $t25 Temp
-tellraw @a [{"text": ""},{"score": {"name": "$t26","objective": "Temp"}},{"text": " tick"}]
+execute store result score $t27 Temp run time query gametime
+scoreboard players operation $t27 Temp -= $t26 Temp
+tellraw @a [{"text": ""},{"score": {"name": "$t27","objective": "Temp"}},{"text": " tick"}]
 execute if score $t17 Temp matches 1 run tellraw @a "set_leaf completed"

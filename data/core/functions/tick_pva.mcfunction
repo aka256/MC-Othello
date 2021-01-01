@@ -1,5 +1,6 @@
 #> core:tick_pva
 # player vs AI(もどき)でのプレイ時に呼び出されるfunction
+# minmax基準と深さ5のゲーム木によるAI
 # @internal
 
 scoreboard players set $done Global 0

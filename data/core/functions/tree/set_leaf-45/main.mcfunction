@@ -22,6 +22,6 @@ execute store result score $t7 Temp run data get storage othello:tree tree[0].co
 execute store result score $t8 Temp run data get storage othello:tree tree[0].cordinate[1]
 
 # デバッグ用
-execute store result score $t25 Temp run time query gametime
+execute store result score $t26 Temp run time query gametime
 
 function core:tree/set_leaf-45/deepth-1_head
