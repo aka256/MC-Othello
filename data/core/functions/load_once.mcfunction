@@ -3,32 +3,22 @@
 # @internal
 
 function core:initialize_board
-data merge storage othello: {"base":{"cordinate":[I;-1,-1],"board":[[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1]],"evaluation":-2147483648,"next":[],"player":-2147483648}}
+data merge storage othello: {"base":{"cordinate":[I;-1,-1],"board":[[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}]],"evaluation":-2147483648,"next":[],"player":-2147483648}}
 data remove storage othello: candidate
 data remove storage othello: temp_candidate
-
-# プレイヤー選択
-scoreboard objectives add Settings dummy
-scoreboard players set $player Settings 0
-scoreboard players set $waiting Settings 1
-# ブロック設置時のボタン用フラグ(廃止予定)
-#scoreboard players set $button Settings 0
-# ブロック設置可否フラグ(廃止予定)
-#scoreboard players set $blockSet Settings 1
-# 自動実行フラグ(廃止予定)
-#scoreboard players set $auto Settings 0
 
 # グローバルスコア
 scoreboard objectives add Global dummy
 # スキップ&ゲーム終了フラグ
 scoreboard players set $skip Global 0
-#scoreboard players set $finish Global 0
-# オセロ盤初期化フラグ
-#scoreboard players set $initBoard Settings 0
 # 状況保存スコア
 scoreboard players set $state Global 0
 # load_once用スコア
 scoreboard players set $loadOnce Global 1
+# 現在のプレイヤー
+scoreboard players set $currentPlayer Global 0
+# 待機中のプレイヤー
+scoreboard players set $standByPlayer Global 0
 # AIの置く駒の種類
 scoreboard players set $aiPiece Global 1
 

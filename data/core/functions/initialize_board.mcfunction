@@ -1,9 +1,7 @@
 #> core:initialize_board
 # @public
 
-data merge storage othello: {"main":[[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,0,1,-1,-1,-1],[I;-1,-1,-1,1,0,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1],[I;-1,-1,-1,-1,-1,-1,-1,-1]]}
-#data merge storage othello: {"main":[[I;-1,0,-1,-1,-1,0,-1,-1],[I;-1,-1,0,-1,-1,0,-1,-1],[I;-1,-1,-1,0,-1,0,-1,1],[I;-1,-1,-1,0,0,0,1,-1],[I;0,0,0,0,0,1,-1,-1],[I;-1,-1,0,0,0,-1,-1,-1],[I;-1,-1,0,0,0,-1,-1,-1],[I;-1,-1,0,0,0,0,0,-1]]}
-#data merge storage othello: {"main":[[I;0,0,0,0,0,0,0,0],[I;0,0,1,1,1,0,1,0,0],[I;0,1,0,0,1,0,1,0],[I;0,0,1,0,0,1,1,0],[I;0,1,0,0,0,0,1,0],[I;0,1,0,1,1,0,0,0],[I;0,0,1,1,1,0,0,0],[I;0,0,0,0,0,0,0,-1]]}
+data merge storage othello: {"main":[[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:0}},{piece:{player:1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:1}},{piece:{player:0}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}]]}
 
-scoreboard players set $player Settings 0
-scoreboard players set $waiting Settings 1
+scoreboard players set $currentPlayer Global 0
+scoreboard players set $standByPlayer Global 1

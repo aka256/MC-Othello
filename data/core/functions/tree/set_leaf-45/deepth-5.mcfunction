@@ -2,13 +2,13 @@
 # @within core:tree/set_leaf-45/*
 
 # playerの値の代入
-execute store result storage othello:tree tree[0].next[0].next[0].next[0].next[0].player int 1 run scoreboard players get $player Settings
+execute store result storage othello:tree tree[0].next[0].next[0].next[0].next[0].player int 1 run scoreboard players get $currentPlayer Global
 
 # 評価関数を実行
 data modify storage othello: board set from storage othello:tree tree[0].next[0].next[0].next[0].next[0].board
 function core:evaluation/main
 # $aiPiece!=$playerであれば、評価値を反転
-execute if score $aiPiece Global = $waiting Settings run scoreboard players operation $v0 Return *= $-1 Const
+execute if score $aiPiece Global = $standByPlayer Global run scoreboard players operation $v0 Return *= $-1 Const
 execute store result storage othello:tree tree[0].next[0].next[0].next[0].next[0].evaluation int 1 run scoreboard players get $v0 Return
 
 # $t23 = min($t23,$v0)

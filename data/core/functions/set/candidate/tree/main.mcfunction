@@ -18,8 +18,8 @@ scoreboard players set $t4 Temp 0
 function core:set/candidate/tree/1
 
 #execute store result score $t0 Temp run data get storage othello:tree tree[0].player
-#execute if score $t0 Temp = $player Settings run scoreboard players set $skip Global 0
-#execute if score $t0 Temp = $waiting Settings run scoreboard players set $skip Global 1
+#execute if score $t0 Temp = $currentPlayer Global run scoreboard players set $skip Global 0
+#execute if score $t0 Temp = $standByPlayer Global run scoreboard players set $skip Global 1
 #execute if score $t0 Temp matches 2 run scoreboard players set $skip Global 2
 
 # 盤面の復元

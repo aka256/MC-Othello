@@ -6,7 +6,7 @@ function core:set/candidate/main
 
 data modify storage othello:tree tree[0].next[0].next[0].next set from storage othello: candidate
 execute store result score $t12 Temp run data get storage othello: candidate_count
-execute store result storage othello:tree tree[0].next[0].next[0].player int 1 run scoreboard players get $waiting Settings
+execute store result storage othello:tree tree[0].next[0].next[0].player int 1 run scoreboard players get $standByPlayer Global
 
 function core:control/change_player/main
 function core:tree/initialize/4

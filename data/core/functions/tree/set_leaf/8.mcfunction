@@ -10,7 +10,7 @@ data modify storage othello: board set from storage othello:tree tree[0].next[0]
 function core:set/candidate/main
 
 # リストcandidateが空でない場合、この場面でのplayerを代入
-#execute if data storage othello: candidate[0] store result storage othello:tree tree[0].next[0].next[0].next[0].player int 1 run scoreboard players get $player Settings
+#execute if data storage othello: candidate[0] store result storage othello:tree tree[0].next[0].next[0].next[0].player int 1 run scoreboard players get $currentPlayer Global
 
 # リストcandidateが空である場合、2を代入
 execute if data storage othello: candidate[0] run data modify storage othello:tree tree[0].next[0].next[0].next[0].player set value 2

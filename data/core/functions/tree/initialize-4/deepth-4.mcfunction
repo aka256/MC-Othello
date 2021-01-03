@@ -6,7 +6,7 @@
 data modify storage othello: board set from storage othello:tree tree[0].next[0].next[0].next[0].board
 function core:evaluation/main
 execute store result storage othello:tree tree[0].next[0].next[0].next[0].evaluation int 1 run scoreboard players get $v0 Return
-execute store result storage othello:tree tree[0].next[0].next[0].next[0].player int 1 run scoreboard players get $waiting Settings
+execute store result storage othello:tree tree[0].next[0].next[0].next[0].player int 1 run scoreboard players get $standByPlayer Global
 
 data modify storage othello:tree tree[0].next[0].next[0].next append from storage othello:tree tree[0].next[0].next[0].next[0]
 data remove storage othello:tree tree[0].next[0].next[0].next[0]

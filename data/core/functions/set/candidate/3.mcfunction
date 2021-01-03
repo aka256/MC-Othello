@@ -8,7 +8,7 @@
 # $t4: 探索方向ベクトルy成分
 
 function core:helper/board/getter/main
-execute if score $v0 Return = $waiting Settings run function core:set/candidate/4
+execute if score $v0 Return = $standByPlayer Global run function core:set/candidate/4
 
 # ($t0,$t1)に駒が置ける場合に実行($t4=1)
 execute if score $t2 Temp matches 1 run function core:set/candidate/6

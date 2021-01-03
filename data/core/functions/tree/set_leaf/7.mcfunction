@@ -6,7 +6,7 @@ data modify storage othello: board set from storage othello:tree tree[0].next[0]
 function core:set/candidate/main
 
 # この場面でのplayerを代入
-#execute store result storage othello:tree tree[0].next[0].next[0].next[0].player int 1 run scoreboard players get $player Settings
+#execute store result storage othello:tree tree[0].next[0].next[0].next[0].player int 1 run scoreboard players get $currentPlayer Global
 
 # リストcandidateが空であるかによる分岐
 execute if data storage othello: candidate[0] run function core:tree/set_leaf/9

@@ -23,34 +23,14 @@
 #declare storage othello: main
 
 #>
-# オセロ設定
-# @public
-#declare objective Settings
-
-#>
 # 現在のプレイヤー
 # @public
-#declare score_holder $player
+#declare score_holder $currentPlayer
 
 #>
 # 待機中のプレイヤー
 # @public
-#declare score_holder $waiting
-
-#>
-# ブロック設置時のボタン用フラグ
-# @public
-#declare score_holder $button
-
-#>
-# ブロック設置可否フラグ
-# @public
-#declare score_holder $blockSet
-
-#>
-# 自動実行フラグ
-# @public
-#declare score_holder $auto
+#declare score_holder $standByPlayer
 
 #>
 # スキップフラグ
@@ -61,14 +41,19 @@
 #declare score_holder $skip
 
 #>
-# ゲーム終了フラグ
+# AIの置く駒の種類
 # @public
-#declare score_holder $finish
+#declare score_holder $aiPiece
 
 #>
-# オセロ盤初期化フラグ
-# @public
-#declare score_holder $init_board
+# 現在の進行状況保存スコア
+# @internal
+#declare score_holder $state
+
+#>
+# load_once用スコア
+# @internal
+#declare score_holder $loadOnce
 
 #>
 # 引数用スコア

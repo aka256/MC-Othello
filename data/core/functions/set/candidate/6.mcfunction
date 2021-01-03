@@ -11,5 +11,5 @@ function core:set/candidate/7
 
 #execute store result score $a0 Argument run scoreboard players get $t0 Temp
 #execute store result score $a1 Argument run scoreboard players get $t1 Temp
-#scoreboard players operation $a2 Argument = $player Settings
+#scoreboard players operation $a2 Argument = $currentPlayer Global
 function core:helper/board/setter/main

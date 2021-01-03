@@ -2,7 +2,7 @@
 # @within core:tree/set_leaf-45/*
 
 # この場面でのplayerを代入
-execute store result storage othello:tree tree[0].next[0].next[0].next[0].player int 1 run scoreboard players get $waiting Settings
+execute store result storage othello:tree tree[0].next[0].next[0].next[0].player int 1 run scoreboard players get $standByPlayer Global
 #data modify storage othello:tree tree[0].next[0].next[0].next[0].player set value 100
 
 # tree[0].next[0].next[0].next[0].boardのリストcandidateを生成

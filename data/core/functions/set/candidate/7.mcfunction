@@ -2,7 +2,7 @@
 # candidate用に駒をセットするfunction
 # @within core:se/candidate/*
 
-scoreboard players operation $a2 Argument = $player Settings
+scoreboard players operation $a2 Argument = $currentPlayer Global
 function core:helper/board/setter/main
 
 scoreboard players operation $a0 Argument -= $t3 Temp
