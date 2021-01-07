@@ -7,7 +7,7 @@ function core:control/change_player/main
 
 # tree[0].next[0].next[0].next[0].boardのリストcandidateを生成
 data modify storage othello: board set from storage othello:tree tree[0].next[0].next[0].next[0].board
-function core:set/candidate/main
+function core:set/candidate/board/main
 
 # リストcandidateが空である場合、2を代入
 execute if data storage othello: candidate[0] run data modify storage othello:tree tree[0].next[0].next[0].next[0].player set value 2

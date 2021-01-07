@@ -7,7 +7,7 @@
 data modify storage othello: board set from storage othello: main
 data modify storage othello: temp_board set from storage othello: main
 
-function core:set/candidate/main
+function core:set/candidate/board/main
 # 作業用storageからの復元
 data modify storage othello: main set from storage othello: temp_board
 

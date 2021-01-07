@@ -7,7 +7,7 @@ execute store result storage othello:tree tree[0].next[0].next[0].next[0].player
 
 # tree[0].next[0].next[0].next[0].boardのリストcandidateを生成
 data modify storage othello: board set from storage othello:tree tree[0].next[0].next[0].next[0].board
-function core:set/candidate/main
+function core:set/candidate/board/main
 
 data modify storage othello:tree tree[0].next[0].next[0].next[0].next set from storage othello: candidate
 execute store result score $t14 Temp run data get storage othello: candidate_count

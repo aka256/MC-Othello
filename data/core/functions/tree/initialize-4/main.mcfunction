@@ -8,7 +8,7 @@
 ################################################################
 
 data modify storage othello: board set from storage othello: main
-function core:set/candidate/main
+function core:set/candidate/board/main
 data modify storage othello:tree tree set from storage othello: candidate
 
 execute store result score $t7 Temp run data get storage othello: candidate_count

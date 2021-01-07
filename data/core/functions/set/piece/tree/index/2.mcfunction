@@ -1,7 +1,7 @@
 #> core:set/piece/tree/index/2
 # @within core:set/piece/tree/index/*
 
-data modify storage othello:tree tree append from storage othello:tree tree[0]
+#data modify storage othello:tree tree append from storage othello:tree tree[0]
 data remove storage othello:tree tree[0]
 scoreboard players add $t6 Temp 1
 

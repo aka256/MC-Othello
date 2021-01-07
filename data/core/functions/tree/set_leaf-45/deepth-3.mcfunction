@@ -8,14 +8,10 @@
 
 # tree[0].next[0].next[0].boardのリストcandidateを生成
 data modify storage othello: board set from storage othello:tree tree[0].next[0].next[0].board
-function core:set/candidate/main
+function core:set/candidate/board/main
 
 function core:control/change_player/main
 
-scoreboard players set $t25 Temp 0
-execute if data storage othello: candidate[0] run scoreboard players set $t25 Temp 1
-execute if score $t25 Temp matches 0 run function core:tree/set_leaf-45/deepth-4
-execute if score $t25 Temp matches 1 run function core:tree/set_leaf-45/deepth-3_skip
 data modify storage othello:tree tree[0].next[0].next[0].next set from storage othello: candidate
 
 # loop用にtree[0].next[0].next[0].next[0].cordinateを$15,$16に保存
@@ -24,6 +20,10 @@ execute store result score $t13 Temp run data get storage othello: candidate_cou
 # tree[0].next[0].next[0].next内の最大のevaluationを保存するスコア
 scoreboard players set $t22 Temp -2147483648
 
+scoreboard players set $t25 Temp 0
+execute if data storage othello: candidate[0] run scoreboard players set $t25 Temp 1
+execute if score $t25 Temp matches 1 run function core:tree/set_leaf-45/deepth-4
+execute if score $t25 Temp matches 0 run function core:tree/set_leaf-45/deepth-3_skip
 
 function core:control/change_player/main
 

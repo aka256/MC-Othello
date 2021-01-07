@@ -19,5 +19,5 @@ execute if score $t19 Temp matches 1 run scoreboard players set $setLeaf Global 
 
 execute store result score $t21 Temp run time query gametime
 scoreboard players operation $t21 Temp -= $t20 Temp
-tellraw @a [{"text": "time: "},{"score": {"name": "$t21","objective": "Temp"}},{"text": "  player: "},{"score": {"name": "$player","objective": "Settings"}}]
+tellraw @a [{"text": "time: "},{"score": {"name": "$t21","objective": "Temp"}},{"text": "  player: "},{"score": {"name": "$currentPlayer","objective": "Global"}}]
 execute if score $t19 Temp matches 1 run tellraw @a "done set_leaf"
