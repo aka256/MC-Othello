@@ -1,5 +1,5 @@
 #> core:helper/block/give_base
-# @public
+# 実行者にOthelloBaseを与える
 # @user
 
 give @s minecraft:armor_stand{EntityTag:{Tags:[OthelloBase],NoGravity:true}} 1

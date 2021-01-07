@@ -1,6 +1,6 @@
 #> core:tick
 # tick.jsonによって呼び出されるfunction
-# @internal
+# @handles #minecraft:tick
 
 execute if score $loadOnce Global matches ..0 run function core:load_once
 execute if score $mode Global matches 1 run function core:tick_pvp

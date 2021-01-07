@@ -1,11 +1,14 @@
 #> core:helper/board/getter/main
 # boardへのgetter
 # $a0,$a1の位置のboardの値を$v0に返すfunction
-# 引数
-#   $x: x座標
-#   $y: y座標
-# 返り値
-#   $v0: board(x,y)の値
+# @input
+#   score $a0 Argument
+#     boardのx座標
+#   score $a1 Argument
+#     boardのy座標
+# @output
+#   score $v0 Return
+#     board($a0,$a1)の値
 # @internal
 
 # 使用方法:board(n,m)の値を取得

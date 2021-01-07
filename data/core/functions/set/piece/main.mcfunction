@@ -1,8 +1,10 @@
 #> core:set/piece/main
 # 駒を置くとき呼び出すfunction
-# 引数
-# $a0: x座標
-# $a1: y座標
+# @input
+#   score $a0 Argument
+#     x座標
+#   score $a1 Argument
+#     y座標
 # @internal
 
 scoreboard players set $t2 Temp 0

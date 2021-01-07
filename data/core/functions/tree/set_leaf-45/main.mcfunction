@@ -1,8 +1,12 @@
 #> core:tree/set_leaf-45/main
 # ゲーム木の深さ4,5に新たな葉を付与するfunction
 # α-β法による意思決定も同時に行う
-# 返り値
-# $v0: α-β法により決定したindex
+# @input
+#   storage othello:tree tree
+#     深さが3のゲーム木
+# @output
+#   score $v0 Return
+#     α-β法により決定したindex
 # @internal
 
 # set_leaf実行終了フラグ初期化

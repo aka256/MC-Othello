@@ -1,4 +1,15 @@
 #> core:control/change_player/main
+# $currentPlayerと$standByPlayerの値を交換する
+# @input
+#   score $currentPlayer Global
+#     現在のプレイヤー
+#   score $standByPlayer Global
+#     待機中のプレイヤー
+# @output
+#   score $currentPlayer Global
+#     交換後のプレイヤー
+#   score $standByPlayer Global
+#     交換後の待機中のプレイヤー
 # @internal
 
 scoreboard players operation $t0 Temp = $currentPlayer Global

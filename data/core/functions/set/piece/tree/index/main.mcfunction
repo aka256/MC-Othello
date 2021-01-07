@@ -1,9 +1,11 @@
 #> core:set/piece/tree/index/main
 # treeの子ノードから適切なboardを取り出す
-# 引数
-# $a0: 対象index
-# 返り値
-# $v0: 対象boardのplayerの値
+# @input
+#   score $a0 Argument
+#     対象index
+# @output
+#   score $v0 Return
+#     対象boardのplayerの値
 # @internal
 
 scoreboard players set $v0 Return -1
