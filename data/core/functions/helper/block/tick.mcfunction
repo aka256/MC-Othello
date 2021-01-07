@@ -1,4 +1,13 @@
 #> core:helper/block/tick
+# ボタンが押された盤面の座標をスコアとして返す
+# 基本的には#tickにより、呼び出される
+# @output
+#   score $v0 Return
+#     対象のx座標
+#   score $v1 Return
+#     対象のy座標
+#   score $pushed Global
+#     ボタンが押されたか示すフラグ
 # @internal
 
 execute at @e[tag=OthelloBase] if block ~1 ~1 ~1 minecraft:stone_button[powered=true] store success score $pushed Global run function core:helper/block/button/0-0

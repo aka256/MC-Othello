@@ -1,5 +1,11 @@
 #> core:tree/initialize-4/main
 # 深さ4のゲーム木の初期生成用function
+# @input
+#   storage othello: main
+#     ゲーム木のrootとなる盤面
+# @output
+#   storage othello:tree tree
+#     深さ4のゲーム木
 # @internal
 
 ################################################################

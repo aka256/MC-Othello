@@ -1,5 +1,11 @@
 #> core:control/reset_candidate/main
-# mainの2を-1に置換
+# main内にある候補マス(2)を空白マス(-1)に置き換える
+# @input
+#   storage othello: main
+#     対象となる盤面
+# @output
+#   storage othello: main
+#     対象となる盤面
 # @internal
 
 execute if data storage othello: main[0][0].piece{player:2} run data modify storage othello: main[0][0].piece.player set value -1

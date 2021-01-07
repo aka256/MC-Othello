@@ -1,4 +1,9 @@
 #> core:control/end_judgment/main
+# PVPでの終了判断処理
+# 状況に応じて、プレイヤーの交代まで行う
+# @output
+#   score $skip Global
+#     次のターンでの状態を示すスコア (0: 次のプレイヤーに交代 1: 次のプレイヤーをスキップ 2: ゲーム終了)
 # @internal
 
 scoreboard players set $t0 Temp 0

@@ -1,11 +1,14 @@
 #> core:helper/board/setter/main
 # boardへのsetter
 # $a0,$a1の位置のboardに$a2を返すfunction
-# 引数
-#   $a0: x座標
-#   $a1: y座標
-#   $a2: board(x,y)へ代入する値
-# @public
+# @input
+#   score $a0 Argument
+#     boardのx座標
+#   score $a1 Argument
+#     boardのy座標
+#   score $a2 Argument
+#     board($a0,$a1)へ代入する値
+# @internal
 
 # 使用方法:board(n,m)にvの値を代入
 # scoreboard players set $a0 Argument n

@@ -1,4 +1,8 @@
 #> core:helper/block/main
+# othello: mainの内容をブロックとして出力する
+# @input
+#   storage othello: main
+#     出力する盤面
 # @internal
 
 execute at @e[tag=OthelloBase] run fill ~ ~ ~ ~9 ~ ~ minecraft:polished_diorite replace

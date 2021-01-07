@@ -1,9 +1,12 @@
 #> core:evaluation/main
-# ゲーム木に評価関数を付与するfunction
+# 特定の盤面の評価関数を求める
+# @input
+#   storage othello: board
+#     評価関数を求める対象となる盤面
+# @output
+#   score $v0 Return
+#     対象盤面の評価値
 # @internal
-
-# $board: 対象となる盤面
-# $v0: 評価結果
 
 scoreboard players set $v0 Return 0
 

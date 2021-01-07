@@ -1,10 +1,13 @@
 #> core:set/piece/tree/cordinate/main
 # treeの子ノードから適切なboardを取り出し、その子ノードを根とした木に書き換える
-# 引数
-# $a0: x座標
-# $a1: y座標
-# 返り値
-# $v0: 対象boardのnext内のplayerの値、対象boardのplayerが2であれば2を返す
+# @input
+#   score $a0 Argument
+#     対象となるx座標
+#   score $a1 Argument
+#     対象となるy座標
+# @output
+#   score $v0 Return
+#     対象boardのnext内のplayerの値、対象boardのplayerが2であれば2を返す
 # @internal
 
 scoreboard players set $v0 Return -1
