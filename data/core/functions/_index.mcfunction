@@ -56,21 +56,26 @@
 #declare score_holder $loadOnce
 
 #>
-# 引数用スコア
+# set_leaf系functionの終了通知フラグ用スコア
+# @internal
+#declare score_holder $setLeaf
+
+#>
+# 引数用オブジェクト
 # @internal
 #declare objective Argument
 
 #>
-# 返り値用スコア
+# 返り値用オブジェクト
 # @internal
 #declare objective Return
 
 #>
-# 作業用スコア
+# 作業用オブジェクト
 # @internal
 #declare objective Temp
 
 #>
-# 定数用スコア
+# 定数用オブジェクト
 # @internal
 #declare objective Const
