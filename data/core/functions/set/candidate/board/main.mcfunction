@@ -1,5 +1,7 @@
 #> core:set/candidate/board/main
+#
 # boardから次の盤面となりうる候補を列挙する
+#
 # @input
 #   storage othello: board
 #     元となる盤面
@@ -10,7 +12,7 @@
 #     candidateリストのlength
 #   storage othello: temp_candidate
 #     boardの候補となりうる座標に2を代入したもの、pvpの際に用いる
-# @internal
+# @within control:state/**
 
 # 元データ保持用storageへの移動
 data modify storage othello: base_board set from storage othello: board

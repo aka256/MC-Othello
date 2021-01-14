@@ -1,7 +1,0 @@
-#> core:initialize_board
-# @public
-
-data merge storage othello: {"main":[[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:0}},{piece:{player:1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:1}},{piece:{player:0}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}],[{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}},{piece:{player:-1}}]]}
-
-scoreboard players set $currentPlayer Global 0
-scoreboard players set $standByPlayer Global 1

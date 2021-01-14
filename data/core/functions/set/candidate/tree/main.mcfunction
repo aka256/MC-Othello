@@ -1,12 +1,14 @@
 #> core:set/candidate/tree/main
+#
 # candidateの対象となる盤面をtreeから作成するfunction
+#
 # @input
 #   storage othello:tree tree
 #     対象となるtree
 # @output
 #   storage othello: main
 #     tree内の候補群の座標を合わせた盤面、user向けのインターフェースに用いられる
-# @internal
+# @within control:state/**
 
 # 盤面をmainから作業用storageに移動
 data modify storage othello: board set from storage othello: main

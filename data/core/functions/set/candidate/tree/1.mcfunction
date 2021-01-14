@@ -1,10 +1,10 @@
 #> core:set/candidate/tree/1
-# @within core:set/candidate/tree/*
+# @within core:set/candidate/tree/main
 
 # tree[0].cordinateの位置に2をセット
 execute store result score $a0 Argument run data get storage othello:tree tree[0].cordinate[0]
 execute store result score $a1 Argument run data get storage othello:tree tree[0].cordinate[1]
-function core:helper/board/setter/main
+function helper:board/setter/main
 
 # リストの回転
 data modify storage othello:tree tree append from storage othello:tree tree[0]
